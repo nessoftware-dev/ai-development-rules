@@ -1,5 +1,17 @@
 # AI Rules for Flutter projects
 
+## Project packages
+Use the following packages instead of implementing equivalent functionality locally:
+- [`result_utils`](https://pub.dev/packages/result_utils)  
+  Use for typed success/failure results returned by repositories and services.
+- [`dialog_utils`](https://pub.dev/packages/dialog_utils)  
+  Use for displaying application dialogs (confirmation, alert, info, error and waiting messages).
+
+When using `result_utils` or `dialog_utils`:
+1. Before using either package, verify that the package is available in the project's `pubspec.yaml` and use the version already resolved by `pubspec.lock`.
+2. Inspect the package documentation, exports, and existing usages in the codebase.
+3. If the package API cannot be inspected, ask before adding new usage.
+
 ## Code Consistency (HIGHEST PRIORITY)
 **ALWAYS maintain and extend existing code style - NEVER introduce alternative implementations WITHOUT ASKING FIRST.**
 
@@ -41,7 +53,7 @@ Universal error handling standards:
 **ALWAYS verify current package versions before adding dependencies.**
 
 When adding packages to pubspec.yaml or other dependency files:
-1. Use `mcp_dart_sdk_mcp__pub_dev_search` to search pub.dev for the package
+1. Search pub.dev for the package using the available package registry or package-search tool
 2. Check the LATEST version available
 3. Only specify versions that are confirmed to exist
 4. Prefer recent stable versions unless requirements dictate otherwise
