@@ -39,12 +39,13 @@ Before implementing:
 
 Universal error handling standards:
 1. **ALL** service functions that can fail must return `Future<FutureResult<T>>` (never `Future<T>`)
-2. Use try-catch blocks to capture ANY exception and convert to `FutureResult.error(String)`
-3. Return errors as: `FutureResult.error(String)`
-4. Return success as: `FutureResult.success(value)`
-5. UI layer accesses results via `.hasError`, `.error`, and `.value` properties
-6. Number of wrapper functions: ZERO - base functions return FutureResult directly
-7. **Wrap ONLY the external function call that throws - NO other code in try-catch**
+2. Exception: a service function used with `FutureBuilder` may return `Future<T>`; when used elsewhere, wrap it with `futureToResult`
+3. Use try-catch blocks to capture ANY exception and convert to `FutureResult.error(String)`
+4. Return errors as: `FutureResult.error(String)`
+5. Return success as: `FutureResult.success(value)`
+6. UI layer accesses results via `.hasError`, `.error`, and `.value` properties
+7. Number of wrapper functions: ZERO - base functions return FutureResult directly
+8. **Wrap ONLY the external function call that throws - NO other code in try-catch**
    - Move all safe transformations, mapping, filtering, sorting OUTSIDE try-catch
    - This clarifies exactly which operation can fail
    - If a transformation throws unexpectedly, that's a visible failure (not silently caught)
