@@ -26,6 +26,32 @@ When working on the project:
 
 This rule takes precedence over all other optimization or style considerations.
 
+## Reason Before Changing
+
+When reviewing or modifying existing code, first understand the actual
+implementation and control flow.
+
+Do not propose a bug fix or refactoring merely because the code resembles a
+known problem pattern or because another implementation is commonly
+recommended.
+
+Before claiming that something is a bug:
+
+1. Identify the exact code involved.
+2. Explain the expected behavior or invariant.
+3. Demonstrate a concrete execution path that causes the problem.
+4. Verify that this execution path is actually possible in the current code.
+5. Explain the observable consequence.
+
+Distinguish between:
+- confirmed bugs,
+- potential risks,
+- design improvements,
+- refactorings,
+- and personal preferences.
+
+Do not present a design preference or hypothetical risk as a bug.
+
 ## Code Reuse
 **ALWAYS search for and reuse existing utility functions and components before creating new ones.**
 
