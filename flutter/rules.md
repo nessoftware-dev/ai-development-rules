@@ -51,6 +51,17 @@ Distinguish between:
 
 Do not present a design preference or hypothetical risk as a bug.
 
+## Code Request Clarity
+
+Do not assume the intended implementation when a user request is ambiguous.
+
+Before making changes:
+1. Determine what the user explicitly requested.
+2. Identify any important assumptions required to interpret the request.
+3. If different reasonable interpretations would result in materially different changes, ASK the user for clarification.
+4. Do not silently choose an interpretation that could cause destructive, privacy-sensitive, architectural, or otherwise consequential changes.
+5. For minor, reversible, and low-risk ambiguities, use the existing project conventions and make the smallest reasonable change.
+
 ## Code Reuse
 **ALWAYS search for and reuse existing utility functions and components before creating new ones.**
 
@@ -151,7 +162,7 @@ Git authentication credentials are secrets.
 This structure makes code easier to scan - overrides are visible at the top, implementations below.
 
 ## Development Process
-**ALWAYS update rules.md when adding new rules or guidelines.**
+**Only update rules.md when the user explicitly establishes or approves a new project rule or guideline.**
 
 Keep this file synchronized with all working patterns and rules. This ensures:
 - Rules are visible to the team
@@ -164,6 +175,9 @@ Keep this file synchronized with all working patterns and rules. This ensures:
 This preference is project-local so it applies to all contributors working on the repo.
 
 ## Development Preferences
+
+Efficiency and parallelization must never override analysis, authorization, privacy, or safety requirements.
+
 - Use absolute file paths in tool calls
 - Include 3-5 lines of context before/after when replacing code
 - Use multi_replace_string_in_file for multiple independent edits
