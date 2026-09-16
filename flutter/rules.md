@@ -35,7 +35,7 @@ Do not propose a bug fix or refactoring merely because the code resembles a
 known problem pattern or because another implementation is commonly
 recommended.
 
-Before claiming that something is a bug:
+Before claiming that something is a bug or proposing a change to existing code:
 
 1. Identify the exact code involved.
 2. Explain the expected behavior or invariant.
