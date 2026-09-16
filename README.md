@@ -11,9 +11,9 @@ AI assistants are useful development partners, but they may not automatically kn
 - Make assumptions about package APIs or dependency versions.
 - Modify more code than is necessary for the requested change.
 
-These rules make the expected project conventions explicit so that AI-generated code fits the codebase instead of gradually making it more inconsistent.
+These rules make the expected AI behavior explicit so that AI-generated code fits the codebase instead of gradually making it more inconsistent.
 
-The rules were developed through extensive discussions with multiple AI assistants about how to make AI-generated code more consistent, focused, and aligned with an existing project.
+The rules were developed iteratively through discussions with AI assistants about how AI should behave when working on an existing software project. The rules themselves were suggested by AI during these discussions and were then reviewed, challenged, refined, and adopted as project rules. This process exposed recurring problems such as AI assistants missing project-specific conventions, proposing changes based on familiar patterns without sufficiently analyzing the existing implementation, repeating functionality that already exists, or choosing a different implementation style.
 These discussions showed that AI assistants can sometimes miss project-specific conventions, repeat functionality that already exists, or choose a different implementation style. This is understandable because an AI assistant usually has only limited knowledge of a project's history, design decisions, and preferred patterns.
 The rules provide that additional context and help the assistant make changes that fit naturally into the existing codebase.
 
