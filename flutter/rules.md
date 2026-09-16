@@ -101,8 +101,8 @@ When adding packages to pubspec.yaml or other dependency files:
 
 When external services are used:
 1. Send only the minimum data necessary to perform the requested task.
-2. Do not send personal, sensitive, confidential, proprietary, or credential-related data unless the user has explicitly confirmed the specific data and external service involved.
-3. Never send passwords, API keys, access tokens, private keys, or other secrets to external services.
+2. Do not retrieve or send personal, sensitive, confidential, proprietary, or credential-related data unless the user has explicitly confirmed the specific data and external service involved.
+3. Never retrieve, send, or expose passwords, API keys, access tokens, private keys, or other secrets to external services.
 4. Prefer inspecting or processing data locally when possible.
 5. If it is unclear whether data may be sent to an external service, ASK the user before sending it.
 
