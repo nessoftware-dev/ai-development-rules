@@ -36,7 +36,6 @@ known problem pattern or because another implementation is commonly
 recommended.
 
 Before claiming that something is a bug or proposing a change to existing code:
-
 1. Identify the exact code involved.
 2. Explain the expected behavior or invariant.
 3. Demonstrate a concrete execution path that causes the problem.
@@ -91,10 +90,21 @@ When adding packages to pubspec.yaml or other dependency files:
 ### Ask Before:
 - **Deleting files** (destructive operations)
 - **Accessing files outside this project**
+- **Sending project files, source code, logs, configuration, or other project data to external services**
+- **Sending personal, sensitive, confidential, proprietary, or credential-related data to external services**
 - **Modifying project structure significantly**
 - **Overwriting existing files**
 - **Creating or storing new rules in memory**
 - **Introducing alternative implementations**
+
+### Data Privacy
+
+When external services are used:
+1. Send only the minimum data necessary to perform the requested task.
+2. Do not send personal, sensitive, confidential, proprietary, or credential-related data unless the user has explicitly confirmed that it may be sent.
+3. Never send passwords, API keys, access tokens, private keys, or other secrets to external services.
+4. Prefer inspecting or processing data locally when possible.
+5. If it is unclear whether data may be sent to an external service, ASK the user before sending it.
 
 ## Code Organization in Classes
 **ALWAYS organize class members in this order:**
