@@ -26,7 +26,7 @@ When working on the project:
 
 This rule takes precedence over all other optimization or style considerations.
 
-## Reason Before Changing
+## Code Analysis
 
 When reviewing or modifying existing code, first understand the actual
 implementation and control flow.
