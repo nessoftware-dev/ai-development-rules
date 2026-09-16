@@ -106,6 +106,36 @@ When external services are used:
 4. Prefer inspecting or processing data locally when possible.
 5. If it is unclear whether data may be sent to an external service, ASK the user before sending it.
 
+## Git Operations
+
+The presence of a Git repository or Git configuration does NOT imply permission to modify the repository or its history.
+Git commands that only inspect repository state, without modifying repository state, may be used without confirmation.
+
+ASK FOR USER CONFIRMATION BEFORE:
+- Staging or unstaging files (`git add`, `git restore --staged`, etc.)
+- Creating, modifying, or deleting commits
+- Creating, deleting, renaming, or force-moving branches
+- Merging or rebasing
+- Resetting or restoring changes that may remove or overwrite user changes
+- Removing untracked files or directories
+- Creating, removing, or modifying tags
+- Modifying Git remotes or Git configuration
+- Pushing changes to a remote repository
+- Force-pushing or otherwise rewriting remote history
+- Creating, removing, or modifying Git worktrees
+
+Do not perform Git operations that are not necessary for the requested task.
+Do not discard, overwrite, or modify existing user changes merely to make the working tree clean or to simplify the requested task.
+When existing changes may be unrelated to the current task, preserve them and take them into account before modifying files or repository state.
+
+### Git Credentials
+
+Git authentication credentials are secrets.
+- Never retrieve, display, export, or transmit Git passwords, access tokens, OAuth tokens, SSH private keys, or other Git authentication credentials.
+- Do not invoke Git credential helpers to retrieve credentials.
+- Do not read credential stores such as `~/.git-credentials` or operating-system credential stores.
+- Git authentication should be performed by Git and the user's configured credential mechanism without exposing the credentials to the AI.
+
 ## Code Organization in Classes
 **ALWAYS organize class members in this order:**
 
