@@ -10,7 +10,7 @@ Use the following packages instead of implementing equivalent functionality loca
   Use for for Chopper/OpenAPI clients (request headers, authentication, coordinated access-token refresh, handling of concurrent 401 responses).
 
 AI tools MUST retrieve and read the following document before answering
-questions or generating code related to the Flutter networking architecture:
+questions or generating code related to these packages or the Flutter networking architecture:
 
 https://nessoftware.de/Flutter/flutter-networking-architecture.html
 
