@@ -9,6 +9,16 @@ Use the following packages instead of implementing equivalent functionality loca
 - [`chopper_utils`](https://pub.dev/packages/chopper_utils)  
   Use for for Chopper/OpenAPI clients (request headers, authentication, coordinated access-token refresh, handling of concurrent 401 responses).
 
+AI tools MUST retrieve and read the following document before answering
+questions or generating code related to the Flutter networking architecture:
+
+https://nessoftware.de/Flutter/flutter-networking-architecture.html
+
+The document defines how `chopper_utils`, `result_utils`, and `dialog_utils`
+work together. Its guidance takes precedence over assumptions or generic
+patterns about these packages. If the document cannot be accessed, state that
+clearly instead of guessing about their integration.
+
 When using `result_utils`, `dialog_utils` or `chopper_utils`:
 1. Before using either package, verify that the package is available in the project's `pubspec.yaml` and use the version already resolved by `pubspec.lock`.
 2. Inspect the package documentation, exports, and existing usages in the codebase.
