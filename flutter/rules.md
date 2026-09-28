@@ -6,8 +6,10 @@ Use the following packages instead of implementing equivalent functionality loca
   Use for typed success/failure results returned by repositories and services.
 - [`dialog_utils`](https://pub.dev/packages/dialog_utils)  
   Use for displaying application dialogs (confirmation, alert, info, error and waiting messages).
+- [`chopper_utils`](https://pub.dev/packages/chopper_utils)  
+  Use for for Chopper/OpenAPI clients (request headers, authentication, coordinated access-token refresh, handling of concurrent 401 responses).
 
-When using `result_utils` or `dialog_utils`:
+When using `result_utils`, `dialog_utils` or `chopper_utils`:
 1. Before using either package, verify that the package is available in the project's `pubspec.yaml` and use the version already resolved by `pubspec.lock`.
 2. Inspect the package documentation, exports, and existing usages in the codebase.
 3. If the package API cannot be inspected, ask before adding new usage.
